@@ -1,5 +1,3 @@
-package HW1;
-
 import java.util.Arrays;
 import java.util.OptionalDouble;
 
@@ -15,6 +13,7 @@ public class task1 {
         int size = 10;
         int[] array = new int[size]; 
         array = GenerateRandomArray(maxRand, size);
+        System.out.println(Arrays.toString(array));
         int min = Arrays.stream(array).min().getAsInt();
         System.out.println("Min = " + min);
         int max = Arrays.stream(array).max().getAsInt();
@@ -28,7 +27,6 @@ public class task1 {
         for (int i = 0; i < array.length; i++) {
             array[i] = ((int) (Math.random() * maxRand));
         }
-        System.out.println(Arrays.toString(array));
         return array;
     }
 
